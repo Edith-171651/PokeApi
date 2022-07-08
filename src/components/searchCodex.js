@@ -12,6 +12,6 @@ const PokemonThumb = ({id, image, name, type, _callback }) => {
             </div>
         </div>
     )
-}
+} 
 
 export default PokemonThumb;

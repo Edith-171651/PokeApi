@@ -11,6 +11,8 @@ const PokemonThumb = ({id, image, name, type, _callback }) => {
                 <small>Type: {type}</small>
             </div>
         </div>
+
+        
     )
 }
 
