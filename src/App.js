@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import PokemonThumb from './components/PokemonThumb'
-import PokemonDetails from './components/PokemonDetails'
+import Info from './Edith'
+import Edith from "./Edith"
+
+
+
 
 const App = () => {
 
    const[allPokemons, setAllPokemons] = useState([])
    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
+   
+    
+     
 
   const getAllPokemons = async () => {
     const res = await fetch(loadMore)
@@ -28,8 +35,9 @@ const App = () => {
   getAllPokemons()
  }, [])
 
-  return (
-    <div className="app-contaner">
+  return ( 
+    
+    <div className="app-container">
       <h1>Pokemon Evolution</h1>
       <div className="pokemon-container">
         <div className="all-container">
@@ -40,8 +48,15 @@ const App = () => {
               image={pokemonStats.sprites.other.dream_world.front_default}
               name={pokemonStats.name}
               type={pokemonStats.types[0].type.name}
-            />)}
-          
+
+            
+            />)} 
+            <div className='button'>
+              <h1>Mi información</h1>
+              
+              <Edith/>
+            </div>
+ 
         </div>
           <button className="load-more" onClick={() => getAllPokemons()}>Load more</button>
       </div>
