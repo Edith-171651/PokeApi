@@ -24,8 +24,7 @@ const App = () => {
     createPokemonObject(data.results)
   }
 
- useEffect(() => {
-  getAllPokemons()
+ useEffect(() => {getAllPokemons()
  }, [])
 
   return (
